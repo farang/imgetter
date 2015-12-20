@@ -1,14 +1,14 @@
 {
-            "name": "farang/ImGetter",
+            "name": "farang/imgetter",
             "autoload": {
                 "psr-4" : {
-                    "farang\\ImGetter" : "/"
+                    "farang\\imgetter" : "/"
                 }
             },
             "repositories": [
                 {
                     "type": "vcs",
-                    "url": "https://github.com/farang/ImGetter"
+                    "url": "https://github.com/farang/imgetter"
                 }
             ]
 }
