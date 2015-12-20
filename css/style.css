@@ -1,0 +1,39 @@
+            .g-from{
+                padding-top: 20px;
+            }
+
+            .container .row form .ins-url{
+                width: 1%;
+            }
+
+            #send-url {
+                background-color: #5BC0DE;
+                border-color: #46B8DA;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #send-url:hover {
+                background-color: #31B0D5;
+                border-color: #269ABC;
+            }
+
+            .loading {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                display: none;
+                width: 20%;
+                z-index: 1;
+            }
+
+            .img-holder {
+                height: 200px;
+                text-align: center;
+            }
+
+            .result {
+                margin-top: 20px;
+                background-color: #f1f1f1;
+                transition: .2s;
+            }
