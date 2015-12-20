@@ -2,7 +2,7 @@
             "name": "farang/imgetter",
             "autoload": {
                 "psr-4" : {
-                    "/": "/"
+                    // "/": "/"
                 }
             },
             "repositories": [
