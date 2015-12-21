@@ -2,7 +2,7 @@
             "name": "farang/imgetter",
             "autoload": {
                 "psr-4": {
-                        "imgetter/": "php_script/"
+                        "imgetter\\": "php_script/"
                     }
                 },
             "repositories": [
