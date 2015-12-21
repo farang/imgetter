@@ -2,10 +2,10 @@
             "name": "farang/imgetter",
             "type": "application",
             "description": "use it to download images from web",
-            "authors": {
+            "authors": [{
                 "name": "Artem Yaworskyi",
                 "email": "artemiavorskyi@gmail.com"
-                },
+                }],
             "require": {
                 "php": ">=5.5.9"
                 },
