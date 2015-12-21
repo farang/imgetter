@@ -1,5 +1,10 @@
 {
             "name": "farang/imgetter",
+            "autoload": {
+                "psr-4": {
+                        "imgetter\\": "src/"
+                    }
+                },
             "repositories": [
                 {
                     "type": "vcs",

@@ -1,6 +1,8 @@
           <?php
-                    error_reporting(0);
-                    
+
+                    namespace imgetter;
+
+
                     function saveImages($array, $directory, $success){
                         $image = array_pop($array);
 
@@ -48,7 +50,6 @@
                     libxml_use_internal_errors(true);
                     $page = new DOMDocument();
                     $page->loadHTMLFile($url);
-                    $page->saveHTMLFile('file.html');
                     $elements = $page->getElementsByTagName('img');
 
                     // ARRAY WITH ALL IMAGE LINKS
