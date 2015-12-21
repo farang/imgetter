@@ -19,5 +19,6 @@
                     "type": "vcs",
                     "url": "https://github.com/farang/imgetter"
                 }
-            ]
+            ],
+            "minimum-stability": "dev"
 }
