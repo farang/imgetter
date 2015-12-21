@@ -2,6 +2,7 @@
             "name": "farang/imgetter",
             "type": "application",
             "description": "use it to download images from web",
+            "license": "MIT",
             "authors": [{
                 "name": "Artem Yaworskyi",
                 "email": "artemiavorskyi@gmail.com"
