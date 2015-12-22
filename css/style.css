@@ -37,3 +37,6 @@
                 background-color: #f1f1f1;
                 transition: .2s;
             }
+            .downloaded {
+                display: none;
+            }

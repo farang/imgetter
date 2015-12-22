@@ -1,0 +1,11 @@
+<?php
+	include_once('../php_script/extract_script.php');
+	include_once('../phpunit.phar');
+	class testIm extends PHPUnit_Framework_TestCase{
+		public function TestUrl(){
+			$imgGet = new imgetter('https://github.com/integrations');
+			$should = ["extracted_images\/github.com\/octocat-spinner-128.gif","extracted_images\/github.com\/afaf2620-6de7-11e5-8103-f22d16daccb8.png","extracted_images\/github.com\/9b001ff4-5415-11e5-9675-b0a657f7865a.png","extracted_images\/github.com\/125c2a0a-a19d-11e5-9845-fdd682143248.png","extracted_images\/github.com\/8f6f33d2-9e93-11e5-8fcb-04cbec9aea60.png","extracted_images\/github.com\/043a4f4a-c806-11e4-802f-ccfde495841c.png","extracted_images\/github.com\/af642004-984d-11e5-8d89-5277782b90c2.png","extracted_images\/github.com\/8d89a982-889d-11e5-8955-bbb367094b47.png","extracted_images\/github.com\/f3bb9a42-2153-11e4-8b02-1654a4808b4c.png","extracted_images\/github.com\/ce264ec6-bfdd-11e3-857e-0bf86917bd3c.png","extracted_images\/github.com\/45b1a6a2-6be2-11e3-9b5d-d5ffd65c36f1.png","extracted_images\/github.com\/51c57ee4-8884-11e5-9450-7a4448799e81.png","extracted_images\/github.com\/e3af7cf4-8214-11e5-8841-84f5aab7a658.png","extracted_images\/github.com\/b875c78a-7155-11e4-86d2-33a1dcb84cf3.png","extracted_images\/github.com\/c8cd0652-7dac-11e5-8407-69f937ca69b5.png","extracted_images\/github.com\/24550660-355f-11e4-8122-0e074ea42f92.png","extracted_images\/github.com\/c06a6596-7c25-11e5-9cd0-f1bfe80495c0.png","extracted_images\/github.com\/c0ca4462-f718-11e4-9d13-b1d88031a7be.png","extracted_images\/github.com\/996da09c-ee92-11e3-9725-7e099715ccb2.png","extracted_images\/github.com\/286420e6-ec3f-11e4-8357-794837c8dc75.png","extracted_images\/github.com\/2280e076-7d83-11e5-9e80-5900845c2b3a.png","extracted_images\/github.com\/09bfd928-03dd-11e4-8cd8-7fcc480b528d.png","extracted_images\/github.com\/de5763bc-5f87-11e4-99d7-fe5107244f27.png","extracted_images\/github.com\/1eee184e-6c4d-11e5-8b29-14846b9bb8d3.png","extracted_images\/github.com\/97aee986-66c9-11e5-9217-e8f8ecd68b68.png","extracted_images\/github.com\/7de11aa4-eb67-11e2-91c4-c3767cd19996.jpg","extracted_images\/github.com\/395a2804-63a0-11e5-8af9-410dbcbd586e.png","extracted_images\/github.com\/f34348e6-fd5c-11e3-8c58-7a53c66e2de8.png"];
+
+			$this->assertEquals( $should, $imgGet );
+		}
+	}

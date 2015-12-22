@@ -1,74 +1,47 @@
-<!DOCTYPE html>
-<html ng-app="stores">
+<!doctype html>
+<html ng-app="ImGetter">
+
 <head>
-	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-  </head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-        type="text/javascript"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/angular.js"></script>
-	<script type="text/javascript">
-
-	var stores = angular.module('stores', [])
-
-	.controller('StoresController', ['$scope', '$http', function($scope, $http){
-		$scope.stores = $http.get('http://www.urbanoutfitters.com/urban/stores/en-uk/api/v2/stores.json').then(function successCallback(response) {
-			
-			$scope.data = response.data.stores;
-     		return $scope.data;
-
-		  }, function errorCallback(response) {
-
-	  	});
-	}])
-
-	.controller('ZipController', ['$scope', '$http', function($scope, $http){
-		$scope.stores = $http.post('http://hosted.where2getit.com/truevalue/rest/locatorsearch', {app:'asas'}).then(function successCallback(response) {
-			
-			$scope.data = response.data.stores;
-     		return $scope.data;
-
-		  }, function errorCallback(response) {
-
-	  	});
-	}]);
-	</script>
+	<title>ImGetter</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
 
-	<div>
-		<div class="container" ng-controller="StoresController">
-			<table class="table table-striped">
-			    <thead>
-			      <tr>
-			        <th>Id</th>
-			        <th>Adress</th>
-			        <th>Postal code</th>
-			        <th>Country</th>
-			        <th>Latitude</th>
-			        <th>Longitude</th>
-			      </tr>
-			    </thead>
-			    <tbody ng-repeat="store in data">
-			      <tr>
-			        <td>{{ store.id }}</td>
-			        <td>{{ store.address_1 }}</td>
-			        <td>{{ store.postal_code }}</td>
-			        <td>{{ store.country_code }}</td>
-			        <td>{{ store.latitude }}</td>
-			        <td>{{ store.longitude }}</td>
-			      </tr>
-			    </tbody>
-			  </table>
+<body ng-controller="GetImgController">
+<div class="g-from">
+	<div class="container">
+		<div class="row">
+			<form method="post" class="form-inline">
+				<div class="input-group">
+					<div class="input-group-addon ins-url">Insert your url right here:</div>
+					<input type="text" name="url" ng-model="url" class="form-control" required>
+					<div class="input-group-addon" id="send-url" ng-click="getImages()">get images</div>
+				</div>
+			</form>
 		</div>
 	</div>
+</div>
 
-	<div>
-		<div class="container" ng-controller="ZipController">
-			{{ data | json }}
+<div class="container">
+	<div class="row">
+		<div class="loading"><img src="img/loading110.gif"></div>
+		<div class="result">
+			<h2 class="downloaded">Downloaded:</h2>
+			<div class="col-md-3 img-holder" ng-repeat="image in imgIn">
+				<img width="100%" class="img-responsive img-thumbnail" src="php_script/{{ image }}">
+			</div>
+			<h2 class="error-message"></h2>
 		</div>
 	</div>
+</div>
 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/imgetter.js"></script>
+<script type="text/javascript" src="js/controllers/GetImgController.js"></script>
 </body>
 </html>
