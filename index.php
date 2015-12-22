@@ -26,11 +26,11 @@
 	<div class="row">
 		<div class="loading"><img src="img/loading110.gif"></div>
 		<div class="result">
-			<h2 class="downloaded">Downloaded:</h2>
-			<div class="col-md-3 img-holder" ng-repeat="image in imgIn">
-				<img width="100%" class="img-responsive img-thumbnail" src="php_script/{{ image }}">
-			</div>
 			<h2 class="error-message"></h2>
+			<h2 class="downloaded">Downloaded:</h2>
+			<div class="col-md-3 img-holder" ng-repeat="image in imgIn track by $index">
+				<img height="100%" class="img-responsive img-thumbnail" src="php_script/{{ image }}">
+			</div>
 		</div>
 	</div>
 </div>

@@ -10,6 +10,9 @@
             "require": {
                 "php": ">=5.5.9"
                 },
+            "require-dev": {
+                "phpunit/phpunit":           "4.8.*"
+            },
             "autoload": {
                 "psr-4": {
                         "imgetter\\": "php_script/"
