@@ -1,5 +1,5 @@
 <?php
-    namespace imgetter;
+    namespace php_script\imgetter;
     use DOMDocument;
     use Exception;
 
